@@ -1,12 +1,15 @@
 name: PR for release branch
 on:
-  push:
+  pull_request:
     branches:
-      - cpick-action
+      - cpick-action-1
+    types: ["closed"]
+
 jobs:
   release_pull_request:
     runs-on: ubuntu-latest
     name: release_pull_request
+    if: ${{ github.event.pull_request.merged == true }}
     steps:
     - name: checkout
       uses: actions/checkout@v1
