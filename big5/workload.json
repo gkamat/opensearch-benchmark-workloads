@@ -15,6 +15,7 @@
   "corpora": [
     {
       "name": "big5",
+      "target-type": "_doc",
       "base-url": "https://dbyiw3u3rf9yr.cloudfront.net/corpora/big5",
       "documents": [
 	{% if not corpus_size %}
